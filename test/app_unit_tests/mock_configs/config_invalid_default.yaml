@@ -1,0 +1,11 @@
+algorithms:
+- name: name
+  module: algorithms.test_algorithms
+  method: test2
+  params:
+  - name: int param with invalid default - some random text
+    type: int
+    default: abc
+  - name: int param with invalid default - wrong type
+    type: int
+    default: [1,2,3]

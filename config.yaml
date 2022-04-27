@@ -1,0 +1,66 @@
+algorithms:
+- name: "My Classic Convolution"
+  module: algorithms.convolution
+  method: my_convolution
+  params:
+    - name: kernel
+      type: 3
+      default: np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]])
+      description: |
+        This parameter is the convolution kernel.
+        The default value is a typical sharpen kernel.
+        You can also use something like np.ones((3,3))/9
+        to obtain a blur kernel.
+
+- name: "cv2 filter2D"
+  module: cv2
+  method: filter2D
+  params:
+    - name: ddepth
+      type: 0
+      default: -1
+    - name: kernel
+      type: 3
+      default: np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]])
+
+
+- name: "My wiener"
+  module: algorithms.wiener
+  method: my_wiener
+  params:
+    - name: PSF
+      type: 3
+      default: np.ones((5, 5)) / 25
+    - name: K
+      type: float
+      default: 0.01
+
+- name: "My Richardson-Lucy"
+  module: algorithms.richardsonlucy
+  method: my_RL_deconvolution_FFT
+  params:
+    - name: PSF
+      type: 3
+      default: np.ones((5, 5)) / 25
+    - name: iterations
+      type: int
+      default: 20
+
+- name: "Original skimage unsupervised wiener"
+  module: algorithms.unsupervised_wiener_original
+  method: unsupervised_wiener_original
+  params:
+    - name: PSF
+      type: 3
+      default: np.ones((5, 5)) / 25
+
+- name: "Original skimage wiener"
+  module: algorithms.wiener_original
+  method: wiener_original
+  params:
+    - name: PSF
+      type: 3
+      default: np.ones((5, 5)) / 25
+    - name: balance
+      type: float
+      default: 0.01

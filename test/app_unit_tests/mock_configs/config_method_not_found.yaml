@@ -1,0 +1,9 @@
+algorithms:
+- name: name
+  module: algorithms.test_algorithms
+  method: abcdefghijklmn
+  params:
+  - name: int param
+    type: int
+  - name: int param 2
+    type: int

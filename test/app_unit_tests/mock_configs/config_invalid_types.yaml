@@ -1,0 +1,11 @@
+algorithms:
+- name: name
+  module: module
+  method: method
+  params:
+  - name: param with wrong int type
+    type: 123
+  - name: param with wrong string type
+    type: wrong string
+  - name: param with no type field
+  - 1 # param is not an object

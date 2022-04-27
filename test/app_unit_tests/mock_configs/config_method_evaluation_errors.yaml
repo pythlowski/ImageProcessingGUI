@@ -1,0 +1,20 @@
+algorithms:
+- name: Alg with too few parameters given
+  module: algorithms.test_algorithms
+  method: test5
+  params:
+  - name: int param
+    type: 0
+
+- name: Alg with too many parameters given
+  method: test1
+  module: algorithms.test_algorithms
+  params:
+    - name: int
+      type: int
+    - name: int2
+      type: int
+
+- name: Alg with internal error
+  method: test4
+  module: algorithms.test_algorithms

@@ -1,0 +1,28 @@
+algorithms:
+- name: name
+  module: algorithms.test_algorithms
+  method: test5
+  params:
+  - name: int param
+    type: 0
+  - name: int param from string
+    type: int
+  - name: float param
+    type: 1
+  - name: float param from string
+    type: float
+  - name: bool param
+    type: 2
+  - name: bool param from string
+    type: bool
+  - name: array param
+    type: 3
+  - name: array param from string
+    type: array
+
+- name: name2
+  method: test1
+  module: algorithms.test_algorithms
+  params:
+    - name: int
+      type: int

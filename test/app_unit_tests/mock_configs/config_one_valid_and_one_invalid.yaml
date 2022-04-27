@@ -1,0 +1,13 @@
+algorithms:
+
+- name: valid
+  module: algorithms.test_algorithms
+  method: test2
+  params:
+  - name: int1
+    type: int
+  - name: int2
+    type: int
+
+- name: invalid no module
+  method: test1
